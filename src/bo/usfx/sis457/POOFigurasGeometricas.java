@@ -29,6 +29,7 @@ public class POOFigurasGeometricas {
         System.out.println("| 1) Calcular el area y perimetro de un Circulo    |");
         System.out.println("| 2) Calcular el area y perimetro de un Cuadrado   |");
         System.out.println("| 3) Calcular el area y perimetro de un Rectangulo |");
+        System.out.println("| 4) Calcular el area y perimetro de un Triangulo  |");
         System.out.println("| *) Salir                                         |");
         System.out.println("+==================================================+");
         entradaTeclado = new Scanner(System.in);
@@ -76,6 +77,20 @@ public class POOFigurasGeometricas {
                 System.out.println("El Area del Rectangulo es: " + rectangulo.getArea());
                 System.out.println("El Perimetro del Rectangulo es: " + rectangulo.getPerimetro());
                 break;
+            case 4:
+                limpiarConsola();
+                System.out.println("+==================================================+");
+                System.out.println("| SubPrograma: Triangulo                           |");
+                System.out.println("+==================================================+");
+                System.out.print("Introduzca el valor de la Base: ");
+                double basse = entradaTeclado.nextDouble();
+                System.out.print("Introduzca el valor de la Altura: ");
+                double alltura = entradaTeclado.nextDouble();
+                Triangulo triangulo = new Triangulo(basse,alltura);
+                System.out.println("El Area del Rectangulo es: " + triangulo.getArea());
+                System.out.println("El Perimetro del Rectangulo es: " + triangulo.getPerimetro());
+                
+                
             default:
                 System.out.println("Salio del programa");
         }
