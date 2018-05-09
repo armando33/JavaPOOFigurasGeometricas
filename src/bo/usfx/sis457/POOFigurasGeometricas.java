@@ -30,6 +30,7 @@ public class POOFigurasGeometricas {
         System.out.println("| 2) Calcular el area y perimetro de un Cuadrado   |");
         System.out.println("| 3) Calcular el area y perimetro de un Rectangulo |");
         System.out.println("| 4) Calcular el area y perimetro de un Triangulo  |");
+        System.out.println("| 5) Calcular el area y perimetro de un Rombo      |");
         System.out.println("| *) Salir                                         |");
         System.out.println("+==================================================+");
         entradaTeclado = new Scanner(System.in);
@@ -89,7 +90,18 @@ public class POOFigurasGeometricas {
                 Triangulo triangulo = new Triangulo(basse,alltura);
                 System.out.println("El Area del Rectangulo es: " + triangulo.getArea());
                 System.out.println("El Perimetro del Rectangulo es: " + triangulo.getPerimetro());
-                
+            case 5:
+                limpiarConsola();
+                System.out.println("+==================================================+");
+                System.out.println("| SubPrograma: Rombo                               |");
+                System.out.println("+==================================================+");
+                System.out.print("Introduzca el valor de la diagonal Mayor: ");
+                double diagonalMayor = entradaTeclado.nextDouble();
+                System.out.print("Introduzca el valor de la diagonal Menor: ");
+                double diagonalMenor = entradaTeclado.nextDouble();
+                Rombo rombo = new Rombo(diagonalMayor,diagonalMenor);
+                System.out.println("El Area del Rectangulo es: " + rombo.getArea());
+                System.out.println("El Perimetro del Rectangulo es: " + rombo.getPerimetro());    
                 
             default:
                 System.out.println("Salio del programa");
